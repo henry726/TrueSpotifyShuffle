@@ -98,17 +98,22 @@ def addsong():
     uris.pop(0)
     songnames.pop(0)
     getimage()
-
+def nextsong():
+    uris.pop(0)
+    songnames.pop(0)
+    getimage()
 #gui
 gui = tk.Tk()
 keyentry = tk.Entry()
 keybutton = tk.Button(gui, text="Submit", command=keysubmit)
 addbutton = tk.Button(gui, text="Add Song", command=addsong)
+nextbutton = tk.Button(gui, text="Next Song", command=nextsong)
 imagelabel = tk.Label(gui)
 songname = tk.Label(gui)
 keyentry.grid(row=0, column=0)
 keybutton.grid(row=0, column=1)
 addbutton.grid(row=4, column=0)
+nextbutton.grid(row=4, column=1)
 imagelabel.grid(row=2, column=0)
 songname.grid(row=3, column=0)
 gui.mainloop()
